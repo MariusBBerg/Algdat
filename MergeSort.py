@@ -65,11 +65,11 @@ def merge(A, p, q, r):
 
 
 def merge_sort(A, p, r):
-    if p<r:
-        q = (p+r)/2
-        merge_sort(A,p,q)
-        merge_sort(A,q+1,r)
-        return merge(A,p,q,r)
+    if p < r:
+        q = (p + r) // 2  
+        merge_sort(A, p, q)  # Sorter venstre halvdel
+        merge_sort(A, q + 1, r)  # Sorter høyre halvdel
+        merge(A, p, q, r)  # Slå sammen de sorterte halvdelene
 
 
 
